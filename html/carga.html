@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contabilidad Integral</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #ffffff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    #loader-container {
+      text-align: center;
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+
+    .loader {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border: 8px solid #79162b;
+      border-top: 8px solid #be6a8d;
+      border-radius: 100%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    .loader img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+
+    .text {
+      color: rgb(73, 0, 0);
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loader-container">
+    <div class="loader">
+      <img src="../src/logo.webp" alt="Logo"> <!-- Asegúrate de tener esta imagen en la misma carpeta -->
+    </div>
+    <div class="text">Cargando...</div>
+  </div>
+ <div><a href=""><section class=""></section></a></div>
+  <script>
+    // Espera 3 segundos y luego inicia el fade-out
+    setTimeout(() => {
+      const loader = document.getElementById('loader-container');
+      loader.style.opacity = '0';
+      // Después de que el fade-out termine (1s), redirige
+      setTimeout(() => {
+        window.location.href = "inicio2.html"; // Cambia esto por tu página de inicio de sesión
+      }, 1000);
+    }, 3000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+/* --------------------------------------------------
+   SUSTITUCIONES GLOBALES: TODO SE RIGE POR VARIABLES
+-------------------------------------------------- */
+
+/* Fondo y texto global */
+body {
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Todos los textos heredan color */
+h1, h2, h3, h4, h5, h6,
+p, span, a, li, button {
+  color: inherit !important;
+  background: none !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar, nav {
+  background-color: var(--bs-navbar-bg) !important;
+  border-bottom: 3px solid var(--bs-primary) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Logos especiales */
+#logos {
+  font-size: 4rem;
+  /* font-family: BeachmanScript; */
+  color: var(--bs-success) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Botones (bootstrap) */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: var(--bs-light) !important;
+}
+.btn-secondary {
+  background-color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
+  color: var(--bs-light) !important;
+}
+.btn-success {
+  background-color: var(--bs-success) !important;
+  border-color: var(--bs-success) !important;
+  color: var(--bs-light) !important;
+}
+.btn-info {
+  background-color: var(--bs-info) !important;
+  border-color: var(--bs-info) !important;
+  color: var(--bs-light) !important;
+}
+.btn-warning {
+  background-color: var(--bs-warning) !important;
+  border-color: var(--bs-warning) !important;
+  color: var(--bs-dark) !important;
+}
+.btn-danger {
+  background-color: var(--bs-danger) !important;
+  border-color: var(--bs-danger) !important;
+  color: var(--bs-light) !important;
+}
+.btn-light {
+  background-color: var(--bs-light) !important;
+  border-color: var(--bs-light) !important;
+  color: var(--bs-dark) !important;
+}
+.btn-dark {
+  background-color: var(--bs-dark) !important;
+  border-color: var(--bs-dark) !important;
+  color: var(--bs-light) !important;
+}
+
+/* Carousel: fondo de cada slide */
+.carousel-item {
+  height: 25rem;
+  background-image: var(--bs-carousel-bg) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+/* Bordes y demás elementos “vino” genéricos */
+.border-vino, .icon-vino, .text-vino {
+  color: var(--bs-light) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+img.rounded-circle {
+  background-color: var(--bs-primary);
+  border: 2px solid var(--bs-success) !important;
+}
+
+h1.logos {
+  color: var(--bs-success);
+}
+
+/* tema vino */
+:root,
+[data-tema="claro"] {
+
+  --bs-primary: #79162b;
+  --bs-secondary: #310013;
+  --bs-success: #ff3460;
+  --bs-info:    #afafaf;
+  --bs-warning: #ffc107;
+  --bs-danger:  #ff0019;
+  --bs-light:   #f8f9fa;
+  --bs-dark:    #212529;
+  --bs-navbar-bg: #50001f;
+
+  --bs-body-bg:    #ffffff;
+  --bs-body-color: #0d0d0d;
+  --bs-secondary-bg: #efe9ed;
+  --bs-secondary-color: rgba(33,37,41,0.75);
+  --bs-border-color: #dee2e6;
+
+  --bs-carousel-bg: url('../src/bg1.png');
+}
+
+/* tema verde */
+[data-tema="oscuro"] {
+
+  --bs-primary: #2d6a4f;
+  --bs-secondary: #14532d;
+  --bs-success: #4caf50;
+  --bs-info:    #81c784;
+  --bs-warning: #a5d6a7;
+  --bs-danger:  #e57373;
+  --bs-navbar-bg: #14532d;
+
+  --bs-body-bg:    #1b3a2c;
+  --bs-body-color: #e8f5e9;
+
+  --bs-secondary-bg:    #123a2c;
+  --bs-secondary-color: #c8e6c9;
+  --bs-border-color:    #2e7d32;
+
+  --bs-carousel-bg: url('../src/bg2.png');
+}
+
+
+/* MARKETING CONTENT */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin: 0 .75rem;
+}
+
+/* FEATURETTES */
+.featurette-divider {
+  margin: 5rem 0;
+}
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+
+div.feat-img{
+  border-color: var(--bs-primary);
+}
+
+/* logos animacion */
+@keyframes slide {
+  from { transform: translateX(25%); }
+  to   { transform: translateX(-100%); }
+}
+.logos {
+  overflow: hidden;
+  padding: 80px 0;
+  background: transparent;
+  white-space: nowrap;
+  position: relative;
+}
+.logos:before, .logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), var(--bs-body-bg));
+}
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), var(--bs-body-bg));
+}
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+.logos-slide img {
+  height: 100px;
+  margin: 0 40px;
+}
+
+input.form-control {
+  border-radius: 0.25rem;
+  box-shadow: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: var(--bs-secondary);
+  border-color: var(--bs-primary);
+}
+
+#searchButton {
+  border-color: var(--bs-primary);
+}
+
+/* Añade o modifica esta regla en tu archivo CSS */
+.col-lg-4 {
+  padding: 15px; 
+  text-align: center; 
+  margin-bottom: 30px; 
+
+  /* Agrega esta línea para la transición suave */
+  transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* Tu clase .highlight-activity debería lucir así (sin la transición aquí) */
+.highlight-activity {
+  background-color: rgba(255, 255, 0, 0.2); /* Fondo ligeramente amarillo */
+  border: 2px solid #ffc107; /* Borde amarillo de Bootstrap */
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.7); /* Sombra brillante */
+}
+
+/* Y si tienes una regla para el tema oscuro, igual sin la transición aquí */
+html[data-tema="oscuro"] .highlight-activity {
+    background-color: rgba(0, 188, 212, 0.2);
+    border: 2px solid #00bcd4;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
+}
+
+.items {
+  gap: 10px;
+}
+
+.item {
+  border: solid 1px var(--bs-body-color);
+  gap: 10px;
+}
+
+
+
+/* RESPONSIVE */
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}

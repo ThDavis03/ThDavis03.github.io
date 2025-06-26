@@ -1,0 +1,281 @@
+/* --------------------------------------------------
+   SUSTITUCIONES GLOBALES: TODO SE RIGE POR VARIABLES
+-------------------------------------------------- */
+
+/* Fondo y texto global */
+body {
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Todos los textos heredan color */
+h1, h2, h3, h4, h5, h6,
+p, span, a, li, button {
+  color: inherit !important;
+  background: none !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar, nav {
+  background-color: var(--bs-navbar-bg) !important;
+  border-bottom: 3px solid var(--bs-primary) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Logos especiales */
+#logos {
+  font-size: 4rem;
+  font-family: BeachmanScript;
+  color: var(--bs-success) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Botones (bootstrap) */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: var(--bs-light) !important;
+}
+.btn-secondary {
+  background-color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
+  color: var(--bs-light) !important;
+}
+.btn-success {
+  background-color: var(--bs-success) !important;
+  border-color: var(--bs-success) !important;
+  color: var(--bs-light) !important;
+}
+.btn-info {
+  background-color: var(--bs-info) !important;
+  border-color: var(--bs-info) !important;
+  color: var(--bs-light) !important;
+}
+.btn-warning {
+  background-color: var(--bs-warning) !important;
+  border-color: var(--bs-warning) !important;
+  color: var(--bs-dark) !important;
+}
+.btn-danger {
+  background-color: var(--bs-danger) !important;
+  border-color: var(--bs-danger) !important;
+  color: var(--bs-light) !important;
+}
+.btn-light {
+  background-color: var(--bs-light) !important;
+  border-color: var(--bs-light) !important;
+  color: var(--bs-dark) !important;
+}
+.btn-dark {
+  background-color: var(--bs-dark) !important;
+  border-color: var(--bs-dark) !important;
+  color: var(--bs-light) !important;
+}
+
+/* Carousel: fondo de cada slide */
+.carousel-item {
+  height: 25rem;
+  background-color: var(--bs-primary) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+/* Bordes y demás elementos “vino” genéricos */
+.border-vino, .icon-vino, .text-vino {
+  color: var(--bs-light) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+img.rounded-circle {
+  background-color: var(--bs-primary);
+  border: 2px solid var(--bs-success) !important;
+}
+
+h1.logos {
+  color: var(--bs-success);
+}
+
+/* --------------------------------------------------
+   TEMA CLARO (vino)
+-------------------------------------------------- */
+:root,
+[data-tema="claro"] {
+  /* Paleta vino original */
+  --bs-primary: #79162b;
+  --bs-secondary: #310013;
+  --bs-success: #ff3460;
+  --bs-info:    #afafaf;
+  --bs-warning: #ffc107;
+  --bs-danger:  #ff0019;
+  --bs-light:   #f8f9fa;
+  --bs-dark:    #212529;
+  --bs-navbar-bg: #50001f;
+
+  /* Tonos extra */
+  --bs-body-bg:    #310013;
+  --bs-body-color: #ffffff;
+  --bs-secondary-bg: #efe9ed;
+  --bs-secondary-color: rgba(33,37,41,0.75);
+  --bs-border-color: #dee2e6;
+}
+
+/* --------------------------------------------------
+   TEMA OSCURO (verdes)
+-------------------------------------------------- */
+[data-tema="oscuro"] {
+  /* Paleta verde */
+  --bs-primary: #2d6a4f;
+  --bs-secondary: #14532d;
+  --bs-success: #4caf50;
+  --bs-info:    #81c784;
+  --bs-warning: #a5d6a7;
+  --bs-danger:  #e57373;
+  --bs-navbar-bg: #14532d;
+
+  /* Fondo y texto */
+  --bs-body-bg:    #1b3a2c;
+  --bs-body-color: #e8f5e9;
+
+  /* Tonos secundarios y bordes */
+  --bs-secondary-bg:    #123a2c;
+  --bs-secondary-color: #c8e6c9;
+  --bs-border-color:    #2e7d32;
+}
+
+:root {
+    --sidebar-width: 280px;
+    --sidebar-width-collapsed: 80px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--bs-primary);
+    transition: all 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: var(--sidebar-width-collapsed);
+}
+
+.sidebar-link {
+    color: #a0a3bd;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    margin: 4px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.sidebar-link.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.notification-badge {
+    background: #ff6b6b;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+}
+
+.profile-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    background-color: var(--bs-secondary);
+    min-height: 100vh;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.collapsed~.main-content {
+    margin-left: var(--sidebar-width-collapsed);
+}
+
+.toggle-btn {
+    position: absolute;
+    right: -15px;
+    top: 20px;
+    background: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.collapsed .toggle-btn {
+    transform: rotate(180deg);
+}
+
+.collapsed .hide-on-collapse {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.collapsed .logo-text {
+    opacity: 0;
+}
+
+.collapsed .profile-info {
+    opacity: 0;
+}
+
+.collapsed .sidebar-link {
+    text-align: center;
+    padding: 1rem !important;
+    margin: 4px 8px;
+}
+
+.collapsed .sidebar-link i {
+    margin: 0 !important;
+}
+
+.profile-info {
+    transition: opacity 0.2s ease;
+}
+
+/* RESPONSIVE */
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}

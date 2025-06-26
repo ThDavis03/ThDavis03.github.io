@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="es" data-tema="claro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contabilidad Integral</title>
+  <link rel="icon" href="../src/logo2.png">
+  <link rel="stylesheet" href="../css/index2.css">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div id="welcomeContainer"></div>
+
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top">
+      <a class="navbar-brand" href="index2.html">Contabilidad Integral</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarCollapse" aria-controls="navbarCollapse"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="index2.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="https://web.whatsapp.com/#" target="_blank">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="https://contabilidad-integral.com/" target="_blank">Web Oficial</a>
+          </li>
+          <li class="nav-item">
+            <a href="admin.html" id="panelLink" class="nav-link disabled text-secondary">Panel Administrativo</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar actividad..." aria-label="Buscar" id="searchInput">
+          <button class="btn btn-outline-info my-2 my-sm-0 text-light" type="button" id="searchButton">Buscar</button>
+        </form>
+        <button onclick="cambiarTema()" class="btn btn-secondary ms-3">Cambiar tema</button>
+        <a href="#" id="salir" class="btn btn-secondary ms-2">Cerrar Sesión</a>
+      </div>
+    </nav>
+  </header>
+
+    <main role="main">
+  
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner"> 
+          <div class="carousel-item active">
+            <img class="first-slide" src="" alt="">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>¡Bienvenido a la Gestion Integral de Obligaciones para Contribuyentes Consientes!</h1>
+                <p>Inicia el dia realizando tus labores contables</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>¡Recuerda tu tiempo limite de actividades!</h1>
+                <p>Entrega tus reportes contables en tiempo y forma para llevar a cabo una mejor administracion</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>¿Ya completaste tu checklist?</h1>
+                <p>Revisa los pasos clave antes de enviar un informe contable.</p>
+                <p><a class="btn btn-lg btn-dark" href="#act" role="button">Ver actividades</a></p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="fourth-slide" src="">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Enlace directo al SAT</h1>
+                <p>Accede fácilmente al portal del Servicio de Administración Tributaria.</p>
+                <p><a class="btn btn-lg btn-dark" href="https://www.sat.gob.mx" role="button" target="_blank">¡Vamos!</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="fifth-slide" src="">
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>¿Necesitas ayuda?</h1>
+                <p>Nuestro equipo está disponible para resolver tus dudas y brindarte el soporte que necesitas.</p>
+                <p><a class="btn btn-lg btn-dark" href="https://web.whatsapp.com/#" target="_blank" role="button">Contacto</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+
+      <!-- = -->
+      <br><br><br>
+      <div class="container marketing">
+
+          <div class="text-center mt-7" id="act">
+      <h1 class="display-4" id="logos">Actividades de Listados</h1>
+    </div>  <br><br>
+
+        <div class="row gap2" >
+          
+          <div class="col-lg-4 card" id="actividades-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Actividades</h2>
+            <p>Permite organizar, controlar y dar seguimiento a todas las tareas contables recurrentes que deben completarse cada mes.</p> <br>
+            <p><a class="btn btn-dark" href="espera.html" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4 card" id="altas-y-bajas-imss">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Altas y bajas IMSS</h2>
+            <p>Son herramientas cruciales para llevar un control detallado de los movimientos afiliatorios de los trabajadores de una empresa ante el Instituto Mexicano del Seguro Social (IMSS).</p><br>
+             <p><a class="btn btn-dark" href="check.html" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4 card" id="facturacion-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Facturación</h2>
+            <p>Son registros detallados de las facturas electrónicas (CFDI) emitidas y/o recibidas por una empresa. </p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="nomina-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Nómina</h2>
+            <p>Son reportes pormenorizados de los pagos a empleados (salarios, percepciones, deducciones), fundamentales para calcular correctamente los sueldos netos, las retenciones de ISR y las aportaciones de seguridad social.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="declaracion-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Declaración</h2>
+            <p>Son resúmenes de información financiera y fiscal que facilitan la elaboración de las declaraciones ante las autoridades fiscales.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="impuesto-3-nomina-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Impuesto 3% Nómina</h2>
+            <p>Son registros detallados que se usan para calcular y controlar el Impuesto Sobre Nóminas (ISN), un impuesto estatal que grava las remuneraciones pagadas por el empleador a sus trabajadores.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="diots-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>DIOTS</h2>
+            <p>Son auxiliares o resúmenes que una empresa prepara para organizar la información de sus operaciones con terceros (proveedores), con el fin de generar la Declaración Informativa de Operaciones con Terceros (DIOT) que se presenta al SAT.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="idses-sipares-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>IDSES y SIPARES</h2>
+            <p><b>IDSE</b>: Plataforma online del IMSS para que empresas realicen trámites de trabajadores. <br><b>SIPARE</b>: Herramienta del IMSS para generar líneas de captura y pagar cuotas obrero-patronales referenciadas.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="suas-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>SUAS</h2>
+            <p>Son un programa informático oficial del IMSS e INFONAVIT que los patrones usan para calcular, determinar y generar los archivos de pago de las cuotas obrero-patronales y aportaciones de vivienda.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="registros-patronales-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Registros Patronales</h2>
+            <p>Son claves de identificación únicas que el Instituto Mexicano del Seguro Social (IMSS) asigna a las empresas o personas físicas con empleados, y que sirven para identificar y controlar el cumplimiento de sus obligaciones en materia de seguridad social.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="imss-infonavit-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>IMSS e INFONAVIT</h2>
+            <p><b>IMSS</b>: Organismo público en México que ofrece seguridad social y atención médica a trabajadores. <br>
+               <b>INFONAVIT</b>: Institución mexicana que otorga créditos de vivienda a trabajadores con base en aportaciones patronales.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="cotejo-idse-vs-nomina-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Cotejo IDSE vs Nómina</h2>
+            <p>Es el proceso de comparar la información de los movimientos de personal reportados al IMSS a través del sistema IDSE (altas, bajas, modificaciones de salario) con los registros internos de la nómina de una empresa.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="repse-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>REPSE</h2>
+            <p>El <b>REPSE</b> es un registro obligatorio ante la STPS para empresas que ofrecen servicios u obras especializadas con personal propio a terceros.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="fonacot-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>FONACOT</h2>
+            <p>Es una institución financiera en México que otorga créditos a los trabajadores formales para la adquisición de bienes y servicios, con descuentos vía nómina.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="firmas-sellos-vigencia-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Firmas y sellos vigencia</h2>
+            <p>Se refieren a los elementos electrónicos como la e.firma (FIEL) y los sellos digitales que otorgan validez legal a documentos electrónicos como las facturas (CFDI), y que tienen un periodo de vigencia definido tras el cual deben ser renovados.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="primas-de-riesgo-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>P de riesgo</h2>
+            <p>Las primas de riesgo son un porcentaje anual que las empresas pagan al IMSS sobre la nómina, calculado según la siniestralidad (accidentes y enfermedades laborales) de sus trabajadores.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="derechos-vehiculares-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Derechos Vehiculares</h2>
+            <p>Son pagos anuales obligatorios que los propietarios de vehículos deben hacer a las autoridades estatales, abarcando conceptos como el refrendo y, en algunos estados, la tenencia, por la posesión y uso del automóvil.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="buzones-activacion-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Buzones activacion</h2>
+            <p>Es un canal de comunicación electrónico obligatorio para contribuyentes, donde el SAT notifica actos administrativos y el contribuyente presenta promociones, solicitudes o avisos.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="barridos-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Barridos</h2>
+            <p>Son procesos de conciliación o verificación masiva de información, como la comparación de datos del IMSS, SAT o bancos, con los registros internos de la empresa, para detectar diferencias o errores de forma eficiente.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-lg-4" id="relacion-hacienda-servidor-listados">
+            <img class="rounded-circle" src="../src/img/check.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Relacion Hacienda Servidor</h2>
+            <p>Se refiere a la conexión o vínculo que existe entre las plataformas informáticas del SAT (Hacienda) y los servidores o sistemas contables y de nómina de las empresas.</p><br>
+            <p><a class="btn btn-dark" href="#" role="button">Realizar &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+          <br><br><br>
+          <div class="text-center mt-7">
+      <h1 class="display-4" id="logos">Algunos Contribuyentes:</h1><br>
+  </div>
+      <div class="logos">
+        <div class="logos-slide"> 
+          <img src="../src/img/Clientes/anfusion.png"/>
+          <img src="../src/img/Clientes/anlop.png"/>
+          <img src="../src/img/Clientes/casadelpuebloo.png"/>
+          <img src="../src/img/Clientes/danvick.png"/>
+          <img src="../src/img/Clientes/deportesherrerao.png"/>
+          <img src="../src/img/Clientes/DURALONAS.png"/>
+          <img src="../src/img/Clientes/fincasdecolina.png"/>
+          <img src="../src/img/Clientes/lacasona.png"/>
+          <img src="../src/img/Clientes/lonasjireh.png"/>
+          <img src="../src/img/Clientes/MasterHD.png"/>
+          <img src="../src/img/Clientes/milpas.png"/>
+          <img src="../src/img/Clientes/motosleo.png"/>
+          <img src="../src/img/Clientes/nato.png"/>
+          <img src="../src/img/Clientes/profaga.png"/>
+          <img src="../src/img/Clientes/shadday.png"/>
+          <img src="../src/img/Clientes/smartmeals.png"/>
+          <img src="../src/img/Clientes/tractores.png"/>
+        </div>
+</div>
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="feat-img col-md-5">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="../src/david.png">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="../src/volovan.png">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="../src/donrem.png">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+      </div>
+
+
+       <footer class="container">
+    <p class="float-right"><a href="#">Volver al principio</a></p>
+    <p>&copy; 2025 Contabilidad Integral Fortín S.C. &middot;
+      <a href="https://contabilidad-integral.com/#nosotros" target="_blank">Términos</a>
+      &middot;
+      <a href="https://contabilidad-integral.com/#nosotros" target="_blank">Privacidad</a>
+    </p>   
+  </footer>
+
+
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button class="close-btn" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+        <div class="row border rounded-5 p-3 bg-white shadow box-area">
+
+          <!--------------------------- Left Box ----------------------------->
+          <div class="col-md-6 left-box d-flex justify-content-center align-items-center flex-column">
+            <div class="featured-image">
+              <img src="/src/img/logolog.png" alt="aqui va el logo" class="img-fluid">
+            </div>
+            <small class="text-wrap mt-4 text-center"
+              style="width: 18rem; font-family: 'Courier New', Courier, monospace;">Únete y disfruta de todos nuestros
+              beneficios exclusivos.</small>
+          </div>
+
+          <!--------------------------- Right Box ---------------------------->
+          <div class="col-md-6 right-box">
+            <div class="row align-items-center text-center">
+              <div class="header-text mb-2">
+                <h2>Regístrate</h2>
+                <p>Únete a nosotros y disfruta de nuestros servicios.</p>
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Nombre usuario"
+                  maxlength='50' required>
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Correo electrónico"
+                  maxlength='50' required class="entrada">
+              </div>
+              <div class="input-group mb-3 position-relative">
+                <input type="password" class="form-control form-control-lg bg-light fs-6 rounded-4"
+                  placeholder="Contraseña" id="registerPassword" minlength='8' maxlength='18' required class="entrada">
+                <span class="position-absolute end-0 me-3 top-50 translate-middle-y password-toggle"
+                  onclick="togglePasswordVisibility('registerPassword', 'registerPasswordToggle')">
+                  <img src="/src/img/eye-cerrado.png" id="registerPasswordToggle" style="width: 20px;">
+                </span>
+              </div>
+              <div class="input-group mb-3">
+                <button class="btn btn-lg btn-primary w-100 fs-6">Registrarse</button>
+              </div>
+              <div class="input-group mb-3">
+                <button class="btn btn-lg btn-light w-100 fs-6"><img src="/src/img/google.png" style="width:20px"
+                    class="me-2"><small>Regístrate con Google</small></button>
+              </div>
+              <div class="row">
+                <small>¿Ya tienes una cuenta? <a href="#" id="loginLink">Inicia sesión</a></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../js/jquery-slim.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+
+  <script>
+  document.getElementById('salir').addEventListener('click', e => {
+    e.preventDefault();
+    // 1) Borra la sesión
+    localStorage.removeItem('currentUser');
+    // 2) Redirige Y REEMPLAZA el historial para que index2 no esté en el back-stack
+    window.location.replace('videoCarga.html');
+  });
+</script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const raw = localStorage.getItem('currentUser');
+      if (!raw) {
+        // Si no hay sesión, volvemos al login
+        return window.location.href = 'videoCarga.html';
+      }
+      const user = JSON.parse(raw);
+
+      // 1) Mostrar alerta de bienvenida
+      const wrap = document.getElementById('welcomeContainer');
+      wrap.innerHTML = `
+        <div class="alert bg-dark alert-dismissible fade show mt-4" role="alert"> 
+          <strong>¡Bienvenido, ${user.username}!</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      `;
+
+      // 2) Configurar enlace de Panel Administrativo
+      const panelLink = document.getElementById('panelLink');
+      if (user.role === 'admin') {
+        panelLink.classList.remove('disabled', 'text-secondary');
+        panelLink.classList.add('text-light');
+        panelLink.href = 'admin.html'; // página de administración
+      } else {
+        panelLink.classList.add('disabled');
+        panelLink.removeAttribute('href');
+      }
+    });
+
+      // 3) Desaparecer la alerta tras 5 segundos
+  setTimeout(() => {
+    const alertNode = document.getElementById('welcomeContainer').querySelector('.alert');
+    if (alertNode) {
+      // Crea la instancia de Bootstrap Alert y ciérrala
+      const bsAlert = new bootstrap.Alert(alertNode);
+      bsAlert.close();
+    }
+  }, 5000); // 5000 ms = 5 segundos
+
+  </script>
+  <script src="../js/tema.js"></script>
+  <script src="../js/index2.js"></script>
+
+</body>
+</html>

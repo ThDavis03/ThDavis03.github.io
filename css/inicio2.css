@@ -1,0 +1,99 @@
+:root {
+  --principal:#8C2641;
+  --principal2:#a73160;
+  --principal3:#c22f6a;
+  --oscuro:#0D0D0D;
+  --claro:#F4F4F4;
+  --blanco:#fff;
+}
+
+/* roboto-latin-wght-normal */
+@font-face {
+  font-family: 'Roboto Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/roboto:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+body {
+  font-family: 'Roboto Variable';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.login-container {
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.login-image h1 {
+  font-size: 5rem;
+  color: var(--oscuro);
+  font-weight: bold;
+}
+
+.login-image p {
+  font-size: 2rem;
+  color: var(--oscuro);
+}
+
+.login-image {
+  background-color: var(--claro);
+  background-size: cover;
+  color: var(--claro) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-image i {
+  margin-bottom: 20px;
+}
+
+.form-container {
+  background-color: var(--principal);
+}
+
+h2 {
+  font-size: 5rem;
+  color: var(--claro);
+  font-weight: bold;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-section {
+  padding: 40px;
+  
+}
+
+label {
+  font-size: 1.5rem;
+  color: var(--claro)
+}
+
+.btn-sesion{
+  background-color: var(--principal3);
+  color: var(--claro);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+.btn-sesion:hover {
+  background-color: var(--principal2);
+}
+
+#btni {
+  text-decoration: none;
+}
